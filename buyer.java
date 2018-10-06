@@ -5,12 +5,12 @@ import java.util.*;
 
 
 
-public class buyer extends seller {
-	
+public class Buyer extends Seller {
+
 	String name,email;
-	Hashtable<String,String> bm=new Hashtable<String,String>(); 
-	  HashSet<String> hashset=new HashSet<String>();  
-	  HashSet<String> wishset=new HashSet<String>(); 
+	Hashtable<String,String> bm=new Hashtable<String,String>();
+	  HashSet<String> hashset=new HashSet<String>();
+	  HashSet<String> wishset=new HashSet<String>();
 	Scanner sc=new Scanner(System.in);
 	public void welcome_buyer()
 	{
@@ -19,7 +19,7 @@ public class buyer extends seller {
 		{
 		System.out.println("Welcome buyer. What would you like to do today?");
         System.out.println("Enter choice:1.create profile 2.view profile 3.search products 4.add to cart 5. add to wishlist 6. checkout 7. see wishlist 8. logout  ");
-        
+
         cho=sc.nextInt();
         switch(cho)
         {
@@ -32,7 +32,7 @@ public class buyer extends seller {
         case 3:
         	see_products();
         	break;
-       
+
         case 4:
         	add_to_cart();
         	break;
@@ -48,7 +48,7 @@ public class buyer extends seller {
         case 8:
         	logout();
         	break;
-        	
+
         }
 	}
 }
@@ -63,7 +63,7 @@ public class buyer extends seller {
 	}
 	public void view_profile()
 	{
-		
+
 		System.out.println("Enter your email");
 		email=sc.next();
 		System.out.println("Welcome " +bm.get(email));
@@ -80,7 +80,7 @@ public class buyer extends seller {
 		        for(String key: keys){
 		            System.out.println("Product id: "+key+"name: "+hm.get(key));
 		        }
-		
+
 		}
 	}
 	public void add_to_cart()
@@ -98,13 +98,13 @@ public class buyer extends seller {
 				 System.out.println("Product :"+hm.get(key)+" is added to cart.");
 				 hashset.add(hm.get(key));
 			 }
-			
-			
+
+
 		}
 	}
-	
-	
-	
+
+
+
 	}
 	public void add_to_wishlist()
 	{
@@ -121,24 +121,24 @@ public class buyer extends seller {
 				 System.out.println("Product :"+hm.get(key)+ "is added to wishlist.");
 				 wishset.add(hm.get(key));
 			 }
-			
-			
+
+
 		}
 	}
-	
-	
-	
+
+
+
 	}
 	public void process_cart()
 	{
 		  int count=0;
 		  String ch;
-		  Iterator<String> itr=hashset.iterator();  
+		  Iterator<String> itr=hashset.iterator();
 		  System.out.println("The products available in cart are");
-		  while(itr.hasNext()){  
-		   System.out.println(itr.next());  
+		  while(itr.hasNext()){
+		   System.out.println(itr.next());
 		   count++;
-		  }  
+		  }
 		  System.out.println("Are you sure to proceed to checkout?(y/n)");
 		  ch=sc.nextLine();
 		  if(ch.equalsIgnoreCase("y"))
@@ -152,12 +152,12 @@ public class buyer extends seller {
 	}
 	public void wish_list()
 	{
-		Iterator<String> itr=wishset.iterator();  
+		Iterator<String> itr=wishset.iterator();
 		  System.out.println("The products available in wishlist are");
-		  while(itr.hasNext()){  
-		   System.out.println(itr.next());  
-		 
-		  }  
+		  while(itr.hasNext()){
+		   System.out.println(itr.next());
+
+		  }
 	}
 
 }
