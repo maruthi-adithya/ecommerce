@@ -2,7 +2,7 @@ package ecommerce;
 
 import java.util.*;
 
-public class seller extends ecommere{
+public class Seller extends Ecommerce{
 
 	String name,email;
 	int end=0;

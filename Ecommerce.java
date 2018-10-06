@@ -2,11 +2,11 @@ package ecommerce;
 import java.util.*;
 
 
-public class ecommere {
-	
-	
+public class Ecommerce {
+
+
 	public void get_user(){
-		
+
 		int choice;
 		System.out.println("Welcome to ecommerce");
 		Scanner sc=new Scanner(System.in);
@@ -23,7 +23,7 @@ public class ecommere {
 		{
 			seller s=new seller();
 			s.welcome_seller();
-			
+
 		}
 		else
 		{
@@ -33,14 +33,11 @@ public class ecommere {
 	}
 	public static void main(String a[])
 	{
-		ecommere user=new ecommere();
-		user.get_user();
-	
-		
-		
+		Ecommerce ecommerce=new ecommere();
+		ecommerce.get_user();
 
 	}
-	
-	
+
+
 
 }
